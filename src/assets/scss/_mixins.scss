@@ -1,0 +1,95 @@
+@mixin sectionTitle{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 145%;
+}
+@mixin moreInfoBg {
+  z-index: -1;
+  position: absolute;
+  top: 17%;
+  height: calc(100% - ($moreInfoPadding * 2));
+  background: radial-gradient(
+    311.86% 1273.73% at 142.58% -34.68%,
+    #e9b633 0%,
+    #be6d3f 100%
+  );
+}
+
+@mixin gradientBtn {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 46px;
+  color: $white;
+  background: radial-gradient(
+    108.88% 819.13% at 95.47% 38.43%,
+    #e9b633 0%,
+    #be6d3f 100%
+  );
+  border-radius: 20px;
+}
+
+@mixin hovers {
+  &:focus {
+    color: $focusColor;
+  }
+  &:hover {
+    color: $hoverColor;
+  }
+  &:active {
+    color: $activeColor;
+  }
+}
+
+@mixin hoversBtn {
+  &:focus {
+    color: $focusColorBtn;
+    outline: 3px solid $focusColor;
+  }
+  &:hover {
+    color: $hoverColorBtn;
+    transform: scale(1.02);
+  }
+  &:active {
+    color: $activeColorBtn;
+    outline: 3px solid $activeColor;
+  }
+}
+
+@mixin hoversInput {
+  &:focus {
+    outline: 3px solid $focusColor;
+  }
+  &:hover {
+    outline: 3px solid $focusColor;
+    transform: scale(1.02);
+  }
+  &:active {
+    outline: 3px solid $activeColor;
+  }
+}
+
+@mixin moreInfoList {
+  padding-left: 36px;
+  margin-top: 60px;
+}
+
+@mixin moreInfoItem {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31px;
+  color: $white;
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+@mixin hoversSvg {
+  &:focus {
+    fill: $focusColor;
+  }
+  &:hover {
+    fill: $hoverColor;
+  }
+  &:active {
+    fill: $activeColor;
+  }
+}
